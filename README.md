@@ -1,6 +1,6 @@
 # Star Wars USer Profiles
 
-Basic React walk through, uses Axios for getting Star Wars data.
+Basic React project, uses Axios for getting Star Wars data, and React Router for user profiles.
 
 React + React Router + Axios
 

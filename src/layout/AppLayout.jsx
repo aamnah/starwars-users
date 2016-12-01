@@ -8,7 +8,7 @@ export const AppLayout = (props) => {
         <hr />
       </header>
       <main>
-        {props.children}
+        { props.children }
       </main>
       <footer>
         <hr />
