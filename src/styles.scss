@@ -1,5 +1,26 @@
 body {
   background: black;
-  color: yellow;
+  color:yellow;
   font-family: sans-serif;
+  -webkit-font-smoothing: antialiased;
+  padding: 3em 3em;
+  a {
+    color: #f1c40f;
+    text-decoration: none;
+    line-height: 1.3em;
+    &:visited {
+      color: #f39c12
+    }
+    &:hover {
+      color: #f39c12
+    }
+  }
+}
+
+header {
+  padding-bottom: 1em;
+}
+footer {
+  padding-top: 5em;
+  font-size: .8em;
 }

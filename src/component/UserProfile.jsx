@@ -32,7 +32,7 @@ export class UserProfile extends Component {
   render () {
     return (
       <div>
-        <h1>Name: {this.state.name}</h1>
+        <h1>{this.state.name}</h1>
         <p>Eye Color: {this.state.eyeColor} </p>
         <p>Height: {this.state.height} </p>
       </div>
