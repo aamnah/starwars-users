@@ -1,11 +1,12 @@
 // Libs
 import React, { Component } from 'react'
 import ReactDOM from 'react-dom'
-import { Router, Route, browserHistory, Link } from 'react-router'
+import { Router, Route, IndexRoute, browserHistory, Link } from 'react-router'
 import { getUsers } from './libs.jsx'
 
 // Components
 import { User } from './component/User.jsx'
+import { AppLayout } from './layout/AppLayout.jsx'
 
 // Styles
 require('./styles.scss')
@@ -50,11 +51,14 @@ const Other = () => {
 
 ReactDOM.render((
   /* ROUTER
-    Let's mount router to the DOM 
-    It'll take a path and show a component to that path
+    Let's mount Router to the DOM 
+    It'll take Routes
+    A Route takes a path and show a component to that path
   */
   <Router history={browserHistory}>
-    <Route path='/' component={Users} />
-    <Route path='/other' component={Other} />
+    <Route path='/' component={AppLayout}>
+      <IndexRoute component={Users} />
+      <Route path='/other' component={Other} />
+    </Route>
   </Router>
 ), document.getElementById('root'))
