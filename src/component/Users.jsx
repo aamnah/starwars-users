@@ -23,11 +23,14 @@ export class Users extends Component {
   }
 
   render () {
+    console.log(this.state.users)
+
     return (
       <div>
         <h1>Star Wars Characters</h1>
         {this.state.users.map(user => {
-          return <User name={user.name} key={user.name} />
+          let id = user.url.split('/')[5]
+          return <User name={user.name} id={id} key={user.name} />
         })}
       </div>
     )
